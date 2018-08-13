@@ -1,0 +1,40 @@
+<div class="jumbotron text-center" style="text-align: left  !important;" >	
+<div class="container form-group">
+	<h2>Add New Request</h2>
+	<form  [formGroup]="reqLoanForm" (ngSubmit)="onSubmit()" >
+		<label>
+		    Name:
+			<input class="form-control" formControlName="name" type="text">
+		</label><br><br>
+		<label>
+		    Loan Type:
+			<select class="form-control" formControlName="loantype">
+				<option>Housing Loan</option>
+				<option>Personal Loan</option>
+			</select>
+		</label><br><br>
+		<label>
+		    Amounte:
+			<input class="form-control" formControlName="amount" type="text">
+		</label><br><br>
+		<label>
+		    Payment scheme:
+			<select class="form-control" formControlName="scheme">
+				<option>6 Months</option>
+				<option>12 Months</option>
+			</select>
+		</label><br><br>
+		<label>
+		    Expected date:
+			<input class="form-control" formControlName='expDate' type="text">
+		</label><br><br>
+		<label>
+		    Reason for requesting the loan:
+			<textarea class="form-control" formControlName='reason' ></textarea>
+		</label><br><br>
+
+
+			<button class="btn btn-outline-success " type="submit">Submmit</button>
+	</form>
+</div>
+</div>
