@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoanService } from '../loan.service';
 
 @Component({
   selector: 'app-view-loan-req',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewLoanReqComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private loanService:LoanService) { }
+  users =[ ];
   ngOnInit() {
+  this.loanService.getlist().subscribe(lists =>{
+  	console.log(lists);
+  	this.users = lists;
+  });
   }
 
 }

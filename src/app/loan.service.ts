@@ -20,12 +20,13 @@ export class LoanService {
   }
 
 
+
 }
 interface Lists{
 	$key?:string;
 	amount?:number;
 	emp_name?:string;
-	exp_date?:timestamp;
+	expDate?:string;
 	remark?:string;
 	status?:string;
 
